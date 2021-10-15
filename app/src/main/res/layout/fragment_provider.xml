@@ -6,17 +6,57 @@
     android:layout_height="match_parent"
     tools:context=".ProductsFragment">
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/btn_add_product">
+        android:layout_height="match_parent"
+        android:gravity="end|right|bottom"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switchCompat_toggle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:checked="false"
+            android:text="Toggle" />
 
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerView_product"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
-    </RelativeLayout>
+
+
+        <FrameLayout
+            android:id="@+id/fragment_map_view_provider"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:visibility="gone">
+
+            <fragment
+                android:id="@+id/map_view_provider"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </FrameLayout>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingActionButton_provider"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:padding="16dp"
+            android:src="@android:drawable/ic_input_add"
+            app:backgroundTint="@android:color/holo_blue_dark"
+            app:elevation="6dp"
+            app:fabSize="normal"
+            app:tint="@android:color/white" />
+
+
+    </LinearLayout>
 
 </FrameLayout>

@@ -11,7 +11,7 @@ import com.srija.lab_a1_a2_android_srija_c0813274.ProviderFragment;
 
 public class TabsAdapter extends FragmentPagerAdapter {
     public TabsAdapter(@NonNull FragmentManager fm) {
-        super(fm);
+        super(fm, FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
     }
 
     @NonNull

@@ -33,6 +33,20 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/textInputLayout_prod_search"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingActionButton_product"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="16dp"
+            android:padding="16dp"
+            app:fabSize="normal"
+            android:src="@android:drawable/ic_input_add"
+            app:backgroundTint="@android:color/holo_blue_dark"
+            app:elevation="6dp"
+            app:tint="@android:color/white" />
     </RelativeLayout>
 
 

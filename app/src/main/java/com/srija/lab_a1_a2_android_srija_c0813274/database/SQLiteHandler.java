@@ -228,7 +228,7 @@ public class SQLiteHandler extends SQLiteOpenHelper {
         values.put(Provider_Lat, provider.getProviderLat());
         values.put(Provider_Lng, provider.getProviderLng());
 
-        return db.update(TABLE_PRODUCT, values, KEY_ID + " = ?", new String[]{String.valueOf(provider.getProviderId())});
+        return db.update(TABLE_PROVIDER, values, KEY_ID + " = ?", new String[]{String.valueOf(provider.getProviderId())});
     }
 
     public void deleteProduct(Product product) {
@@ -239,7 +239,7 @@ public class SQLiteHandler extends SQLiteOpenHelper {
 
     public void deleteProvider(Provider provider) {
         SQLiteDatabase db = this.getWritableDatabase();
-        db.delete(TABLE_PRODUCT, KEY_ID + " = ?", new String[]{String.valueOf(provider.getProviderId())});
+        db.delete(TABLE_PROVIDER, KEY_ID + " = ?", new String[]{String.valueOf(provider.getProviderId())});
         db.close();
     }
 
